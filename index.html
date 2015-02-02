@@ -4,6 +4,13 @@
   <meta charset="utf-8">
   <title>Appointment App</title>
   <meta name="viewport" content="width=device-width">
+  <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main-page.css">
+  <link rel="stylesheet" href="css/appt-detail-page.css">
+  <link rel="stylesheet" href="css/add-appt-page.css">
+
+
 </head>
 <body>
 
@@ -16,12 +23,18 @@
     <script id="main-page" type="text/html">
 
       <div class="main-view">
-        <div class="main-view-header"><button class="add-appt"></button></div>
+      <div class="overlay"></div>
+        <div class="main-view-header"><button class="add-appt">+</button><span class="header-span">Appointments</span></div>
         <ul class = "appt-container">
           <li class="appt-li">
-            <span class="appt-time">5pm</span>
-            <span class="appt-name">Test Appt</span>
-            <span class="appt-address">201 W Main</span>
+            <div class="date-time-div">
+              <span class="appt-time">5pm</span>
+              <span class="appt-date">10/21</span>
+            </div>
+            <div class="name-address-div">
+              <span class="appt-name">Test Appt</span>
+              <span class="appt-address">201 W Main</span>
+            </div>
             <button class="remove-appt-button">x</button>
               <div class="confirm-delete-popup">
                 <span class="confirm-delete-text">Are you sure?</span>

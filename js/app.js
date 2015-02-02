@@ -21,7 +21,6 @@ $(function() {
   // });
 
   $('.empty-wrapper').on('click', '.back-button', function(){
-
     $('.main-view').html(mainView);
   });
 
@@ -29,5 +28,7 @@ $(function() {
     alert('heyo');
     $('.main-view').html(detailAppt);
   });
+
+
 
 });
