@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
   <meta charset="utf-8">
-  <title>JS Bin</title>
+  <title>Appointment App</title>
+  <meta name="viewport" content="width=device-width">
 </head>
 <body>
-  <header></header>
-    <div class="main-view">
-      <div class="main-view-header"><button class="add-appt"></button></div>
-      <ul class = "appt-container">
-        <li class="appt-li">
-          <span class="appt-time">5pm</span>
-          <span class="appt-name">Test Appt</span>
-          <span class="appt-address">201 W Main</span>
-          <button class="remove-appt-button">x</button>
-            <div class="confirm-delete-popup">
-              <span class="confirm-delete-text">Are you sure?</span>
-              <button class="confirm-delete-yes">yes</button>
-              <button class="confirm-delete-cancel">cancel</button>
-            </div>
-        </li>
-      </ul>
 
-    </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <header></header>
+
+  <div class="empty-wrapper"></div>
+
+    <script id="main-page" type="text/html">
+
+      <div class="main-view">
+        <div class="main-view-header"><button class="add-appt"></button></div>
+        <ul class = "appt-container">
+          <li class="appt-li">
+            <span class="appt-time">5pm</span>
+            <span class="appt-name">Test Appt</span>
+            <span class="appt-address">201 W Main</span>
+            <button class="remove-appt-button">x</button>
+              <div class="confirm-delete-popup">
+                <span class="confirm-delete-text">Are you sure?</span>
+                <button class="confirm-delete-yes">yes</button>
+                <button class="confirm-delete-cancel">cancel</button>
+              </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </script>
 
     <script id="add-appt-page" type="text/html">
 
-      <header></header>
+
       <div class="add-appt-view">
         <div class="add-appt-header">
-          <button class="back-button"><</button>
+          <button class="back-button">Back</button>
         </div>
 
           <form class="add-appt-form">
@@ -56,7 +66,7 @@
       <div class="appt-detail-view">
 
         <div class="appt-detail-header">Appointment Detail View
-          <button class="back-button"><</button>
+          <button class="back-button">Back</button>
           <button class="edit-appt-button">edit</button>
         </div>
 
