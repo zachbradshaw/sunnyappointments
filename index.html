@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+  <header></header>
+    <div class="main-view">
+      <div class="main-view-header"><button class="add-appt"></button></div>
+      <ul class = "appt-container">
+        <li class="appt-li">
+          <span class="appt-time">5pm</span>
+          <span class="appt-name">Test Appt</span>
+          <span class="appt-address">201 W Main</span>
+          <button class="remove-appt-button">x</button>
+            <div class="confirm-delete-popup">
+              <span class="confirm-delete-text">Are you sure?</span>
+              <button class="confirm-delete-yes">yes</button>
+              <button class="confirm-delete-cancel">cancel</button>
+            </div>
+        </li>
+      </ul>
+
+    </div>
+
+    <script id="add-appt-page" type="text/html">
+
+      <header></header>
+      <div class="add-appt-view">
+        <div class="add-appt-header">
+          <button class="back-button"><</button>
+        </div>
+
+          <form class="add-appt-form">
+            <label>Title</label>
+            <input type="text" class="add-appt-name"><br>
+            <label>Date</label>
+            <input type="text" class="add-appt-date"><br>
+            <label>Time</label>
+            <input type="text" class="add-appt-time"><br>
+            <label>Street</label>
+            <input type="text" class="add-appt-street"><br>
+            <label>City, State</label>
+            <input type="text" class="add-appt-state"><br>
+            <input type="submit">
+          </form>
+
+        </div>
+
+    </script>
+
+    <script id="appt-detail-page" type="text/html">
+
+      <div class="appt-detail-view">
+
+        <div class="appt-detail-header">Appointment Detail View
+          <button class="back-button"><</button>
+          <button class="edit-appt-button">edit</button>
+        </div>
+
+        <div class="detail-name">Meet Brad</div>
+        <div class="detail-time-date">5pm, Tuesday October, 21</div>
+        <div class="detail-address">201 W Main St, Durham NC</div>
+        <div class="detail-weather">Weather Box</div>
+
+      </div>
+
+    </script>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
