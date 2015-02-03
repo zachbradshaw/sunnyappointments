@@ -51,6 +51,7 @@ body {
     font-size: 1.2em;
     background: none;
     border: none;
+    color: white;
 
   }
 
@@ -109,12 +110,5 @@ body {
   .appt-container {
     height: 100%;
   }
-
-  .add-appt-view {
-    background: black;
-    height: 45em;
-  }
-
-
 
 }

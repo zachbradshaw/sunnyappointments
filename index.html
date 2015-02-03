@@ -52,25 +52,29 @@
 
 
       <div class="add-appt-view">
+      <div class="overlay"></div>
         <div class="add-appt-header">
-          <button class="back-button">Back</button>
+          <span class="header-span">New Appointment</span>
+          <button class="back-button">b</button>
         </div>
 
-          <form class="add-appt-form">
-            <label>Title</label>
-            <input type="text" class="add-appt-name"><br>
-            <label>Date</label>
-            <input type="text" class="add-appt-date"><br>
-            <label>Time</label>
-            <input type="text" class="add-appt-time"><br>
-            <label>Street</label>
-            <input type="text" class="add-appt-street"><br>
-            <label>City, State</label>
-            <input type="text" class="add-appt-state"><br>
-            <input type="submit">
-          </form>
-
-        </div>
+          <div class="appt-form-container">
+            <form class="add-appt-form">
+              <!-- <label class="form-label">Title</label> -->
+              <input type="text" class="add-appt-name" placeholder="Name"><br>
+              <!-- <label class="form-label">Date</label> -->
+              <input type="text" class="add-appt-date" placeholder="Date"><span class="calander-icon"></span><br>
+              <!-- <label class="form-label">Time</label> -->
+              <input type="text" class="add-appt-time" placeholder="Time"><br>
+              <!-- <label class="form-label">Street</label> -->
+              <input type="text" class="add-appt-street" placeholder="Address"><br>
+              <!-- <label class="form-label">City, State</label> -->
+              <input type="text" class="add-appt-state" placeholder="City, State"><br>
+              <button class="confirm-appt">Make Appointment</button>
+            </form>
+          </div>
+</span>
+      </div>
 
     </script>
 
