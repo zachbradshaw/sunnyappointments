@@ -69,6 +69,8 @@ body {
     font-size: 1.3em;
     box-sizing: border-box;
     color: black;
+    font-weight: 600;
+    line-height: 1.4em;
   }
 
   .confirm-delete-popup {
@@ -85,7 +87,7 @@ body {
     text-align: center;
     position: absolute;
     background-color: #3fc380;
-    width: 3em;
+    width: 4.4em;
     top: 50%;
     padding: 1em 0;
     transform: translateY(-50%);
