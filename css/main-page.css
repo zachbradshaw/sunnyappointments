@@ -1,5 +1,4 @@
 body {
-  /*font-family: 'Nobile', sans-serif;*/
   font-family: 'Raleway', sans-serif;
   height: 100vh;
   color: white;
@@ -39,8 +38,6 @@ body {
     opacity: .7;
     padding-top: .9em;
     font-size: 1.3em;
-
-
   }
 
   .header-span {
@@ -55,7 +52,6 @@ body {
     background: none;
     border: none;
     color: white;
-
   }
 
   .appt-li {
@@ -95,17 +91,14 @@ body {
     font-family: raleway;
     width: 4em;
     font-size: 1em;
-
   }
 
   .confirm-delete-yes {
     background: darkgreen;
-
   }
 
   .confirm-delete-cancel {
     background: #b96a15;
-
   }
 
 

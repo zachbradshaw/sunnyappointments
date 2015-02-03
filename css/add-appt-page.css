@@ -3,7 +3,6 @@
   position: absolute;
   top: 2em;
   left: 1em;
-
 }
 
 
@@ -39,13 +38,11 @@
     opacity: .7;
     padding-top: .9em;
     font-size: 1.3em;
-
   }
 
   .add-appt-header .back-button {
     background: none;
     border: none;
-    /*padding: 1em;*/
     color: white;
     float: left;
     position: absolute;
@@ -58,7 +55,6 @@
     width: 100%;
     margin: auto;
     padding-top: 1em;
-    /*text-align: center;*/
   }
 
   .add-appt-form {
@@ -70,7 +66,6 @@
   .form-label {
     font-size: 1.3em;
     text-align: left;
-    /*margin-right: 1em;*/
     visibility: hidden;
   }
 
