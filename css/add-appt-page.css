@@ -21,17 +21,23 @@
     min-height: 3em;
     text-align: center;
     position: relative;
-    font-size: 1.5em;
     background: black;
     opacity: .7;
+    padding-top: .9em;
+    font-size: 1.3em;
+
   }
 
   .add-appt-header .back-button {
     background: none;
     border: none;
-    padding: 1em;
+    /*padding: 1em;*/
     color: white;
     float: left;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .appt-form-container {
