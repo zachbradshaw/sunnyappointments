@@ -25,7 +25,7 @@ body {
   .overlay {
     position: absolute;
     background: black;
-    opacity: .5;
+    opacity: .3;
     height: 100%;
     width: 100%;
   }
@@ -74,8 +74,40 @@ body {
   }
 
   .confirm-delete-popup {
-    visibility: hidden;
+    visibility: visible;
+    position: absolute;
+    background: black;
+    box-sizing: border-box;
+    padding-left: .4em;
+    color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
+
+  .confirm-delete-yes, .confirm-delete-cancel {
+    float: right;
+    box-sizing: border-box;
+    height: 100%;
+    border: none;
+    opacity: .7;
+    font-family: raleway;
+    width: 4em;
+    font-size: 1em;
+
+  }
+
+  .confirm-delete-yes {
+    background: darkgreen;
+
+  }
+
+  .confirm-delete-cancel {
+    background: #b96a15;
+
+  }
+
 
   .appt-name,
   .appt-address {
