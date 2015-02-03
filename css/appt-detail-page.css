@@ -48,7 +48,7 @@
 
 .appt-detail-container {
   background: white;
-  margin-top: .6em;
+  margin-top: .em;
   /*padding: 1.3em;*/
   opacity: .4;
   color: black;
@@ -72,6 +72,7 @@
 
 .map-canvas {
   background: green;
+  padding-top: 1em;
 }
 
 .detail-weather {
