@@ -74,7 +74,7 @@ body {
   }
 
   .confirm-delete-popup {
-    visibility: visible;
+    visibility: hidden;
     position: absolute;
     background: black;
     box-sizing: border-box;
@@ -134,8 +134,9 @@ body {
   }
 
   .remove-appt-button {
+    font-family: sunnyapp;
     position: absolute;
-    right: 1%;
+    right: 3%;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.3em;

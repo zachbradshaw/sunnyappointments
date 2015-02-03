@@ -25,9 +25,16 @@ $(function() {
   });
 
   $('.empty-wrapper').on('click', '.appt-li', function() {
-    alert('heyo');
     $('.main-view').html(detailAppt);
   });
+
+  // $('.empty-wrapper').on('click', '.remove-appt-button', function() {
+  //   $('.empty-wrapper').off('click', '.appt-li', function(){
+  //     $('.main-view').html(mainView);
+  //   });
+  //   alert('testing');
+  //   $('.confirm-delete-popup').attr('style','visibility', 'visible');
+  // });
 
 
 });

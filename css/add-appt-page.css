@@ -1,4 +1,18 @@
+.error-text {
+  color: black;
+  position: absolute;
+  top: 2em;
+  left: 1em;
+
+}
+
+
 @media (max-width: 415px) {
+
+  .error-text {
+    visibility: hidden;
+
+  }
 
   .add-appt-view {
     background: black;
