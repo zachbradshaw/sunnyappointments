@@ -72,8 +72,11 @@
 }
 
 .map-canvas {
+
   background: rgba(183, 143, 22, 0.69);
   opacity: .9;
+  background-image: url(googlemap.png);
+  background-size: cover;
   /*padding-top: 1em;*/
 }
 
