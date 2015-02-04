@@ -1,34 +1,20 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
   <meta charset="utf-8">
   <title>Appointment App</title>
   <meta name="viewport" content="width=device-width">
   <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Raleway:700,400' rel='stylesheet' type='text/css'>
-
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main-page.css">
   <link rel="stylesheet" href="css/appt-detail-page.css">
   <link rel="stylesheet" href="css/add-appt-page.css">
   <link href="https://fontastic.s3.amazonaws.com/wwg3Jf9kDTvTkeuAzZJHre/icons.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-  <!-- // <script src="https://maps.googleapis.com/maps/api/js"></script>
-  // <script>
-  //   function initialize() {
-  //        var mapCanvas = document.querySelector('.map-canvas');
-  //        var mapOptions = {
-  //          center: new google.maps.LatLng(44.5403, -78.5463),
-  //          zoom: 8,
-  //          mapTypeId: google.maps.MapTypeId.ROADMAP
-  //        }
-  //        var map = new google.maps.Map(mapCanvas, mapOptions)
-  //      }
-  //      google.maps.event.addDomListener(window, 'load', initialize);
-  //    </script> -->
-
-
 
 </head>
 
@@ -38,6 +24,7 @@
 
   <div class="empty-wrapper"></div>
 
+    <!-- This script contains HTML for main page -->
     <script id="main-page" type="text/html">
 
       <div class="main-view">
@@ -81,6 +68,7 @@
 
     </script>
 
+    <!-- This script contains HTML for the add appointment page -->
     <script id="add-appt-page" type="text/html">
 
 
@@ -113,6 +101,7 @@
 
     </script>
 
+    <!-- This script contains HTML for the appointment detail page -->
     <script id="appt-detail-page" type="text/html">
 
       <div class="appt-detail-view">
@@ -143,28 +132,16 @@
 
       </div>
 
-      <!-- // <script src="https://maps.googleapis.com/maps/api/js"></script>
-      //  <script>
-      //   function initialize() {
-      //        var mapCanvas = document.querySelector('.map-canvas');
-      //        var mapOptions = {
-      //          center: new google.maps.LatLng(44.5403, -78.5463),
-      //          zoom: 8,
-      //          mapTypeId: google.maps.MapTypeId.ROADMAP
-      //        }
-      //        var map = new google.maps.Map(mapCanvas, mapOptions)
-      //      }
-      //      google.maps.event.addDomListener('#appt-detail-page', 'load', initialize);
-      //    </script> -->
-
     </script>
 
     <script src="js/app.js"></script>
     <script src="js/appointment.js"></script>
     <script src="js/appointment-store.js"></script>
-    <script src="js/page-manager.js"></script>
     <script src="js/appointment-form.js"></script>
+    <script src="js/show-list-page.js"></script>
     <script src="js/show-add-page.js"></script>
+    <script src="js/show-detail-page"></script>
+    <script src="js/init.js"></script>
 
 </body>
 </html>
