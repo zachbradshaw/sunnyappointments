@@ -12,8 +12,6 @@ $(function () {
 
   function getApptDetails (){
 
-
-
     return {
       title: addTitle.value,
       date: addDate.value,
