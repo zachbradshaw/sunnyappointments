@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/add-appt-page.css">
   <link href="https://fontastic.s3.amazonaws.com/wwg3Jf9kDTvTkeuAzZJHre/icons.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+  <script src="/Users/hifilorau/code/exercises/sunnyappointments/bower_components/lodash/lodash.min.js"></script>
 </head>
 
 <body>
@@ -36,18 +36,21 @@
         <div class="main-view-header"><button class="add-appt">+</button><span class="header-span">Appointments</span></div>
         <ul class = "appt-container">
 
+          <% m.appts.forEach(function (appt) { %>
+
           <li class="appt-li">
 
             <div class="date-time-div">
 
-              <span class="appt-time">5pm</span>
-              <span class="appt-date">10/21</span>
+              <span class="appt-time"><%- appt.time %></span>
+              <span class="appt-date"><%- appt.date %></span>
 
             </div>
             <div class="name-address-div">
 
-              <span class="appt-name">Meet Brad</span>
-              <span class="appt-address">201 W Main</span>
+              <span class="appt-name"><%- appt.title %></span>
+              <span class="appt-address"><%- appt.streetAddress %></span>
+              <span class="appt-city-state"><%- appt.cityState %></span>
 
             </div>
             <button class="remove-appt-button">x</button>
@@ -62,11 +65,7 @@
 
           </li>
 
-        </ul>
-
-      </div>
-
-    </script>
+          <% }) %>
 
     <!-- This script contains HTML for the add appointment page -->
     <script id="add-appt-page" type="text/html">

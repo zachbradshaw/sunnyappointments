@@ -3,5 +3,5 @@ $(function () {
   app.appointments.load();
 
   app.showListPage();
-  
+
 });

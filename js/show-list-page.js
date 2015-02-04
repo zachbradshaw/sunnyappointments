@@ -2,9 +2,14 @@ app.showListPage = function () {
 
   var mainView = $('#main-page').html();
   var detailAppt = $('#appt-detail-page').html();
+  var appts = app.appointments.query();
+  var template = _.template(mainView, {variable: 'm'});
 
-  $('.empty-wrapper').html(mainView);
 
+  // $('.empty-wrapper').html(mainView);
+  $('.empty-wrapper').html(template  ({
+      appts: appts
+  }));
 
 
   $('.empty-wrapper').on('click', '.appt-li', function() {
@@ -13,7 +18,9 @@ app.showListPage = function () {
 
 
   $('.empty-wrapper').on('click', '.remove-appt-button', function() {
-    ('.appt-container').html('.appt-li');
+    alert("fire");
+    // app.appointments.remove()
+
   });
 
 

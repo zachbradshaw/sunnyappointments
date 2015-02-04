@@ -1,0 +1,48 @@
+<script id="main-page" type="text/html">
+
+  <div class="main-view">
+
+    <div class="error-text">
+      IF YOU CAN SEE THIS YOU NEED TO SHRINK YOUR DISPLAY TO BELOW 415PX YOU DONKEY!
+    </div>
+    <div class="overlay"></div>
+    <div class="main-view-header"><button class="add-appt">+</button><span class="header-span">Appointments</span></div>
+    <ul class = "appt-container">
+
+      <% app.appointments.query()forEach(function (appt) { %>
+
+
+      <li class="appt-li">
+
+        <div class="date-time-div">
+
+          <span class="appt-time"><%- appt.time %></span>
+          <span class="appt-date"><%- appt.date %></span>
+
+        </div>
+        <div class="name-address-div">
+
+          <span class="appt-name"><%- appt.title %></span>
+          <span class="appt-address"><%- appt.streetAddress %></span>
+          <span class="appt-city-state"><%- appt.cityState %></span>
+
+        </div>
+        <button class="remove-appt-button">x</button>
+
+          <div class="confirm-delete-popup">
+
+            <span class="confirm-delete-text">Delete Test Appt?</span>
+            <button class="confirm-delete-yes">yes</button>
+            <button class="confirm-delete-cancel">cancel</button>
+
+          </div>
+
+      </li>
+
+      <% }) %>
+
+    </ul>
+
+  </div>
+
+</script>
