@@ -22,11 +22,13 @@ $(function() {
   $('.empty-wrapper').html(mainView);
 
   // $('.add-appt').click(function() {
-  //   $('.main-view').html(addAppt);
+    // $('.main-view').html(addAppt);
   // });
 
   $('.empty-wrapper').on('click', '.add-appt',function() {
-    app.showEditPage();
+
+    /// goes to show-add-
+    app.showAddPage();
   });
 
   // $('.add-appt-header').click(function() {
