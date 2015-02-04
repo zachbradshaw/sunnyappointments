@@ -1,5 +1,5 @@
 $(function () {
-  app.appointments = AppointmentStore();
+  // app.appointments = app.AppointmentStore();
 
   // var addTitle = $('.add-appt-name');
   // var addDate = $('.add-appt-date');

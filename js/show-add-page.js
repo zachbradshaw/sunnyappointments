@@ -2,10 +2,16 @@
 
 app.showAddPage = function () {
 
+  var mainView = $('#main-page').html();
   var addAppt = $('#add-appt-page').html();
   $('.main-view').html(addAppt);
   var apptForm = $('.add-appt-form');
 
+
+
+  $('.empty-wrapper').on('click', '.back-button', function(){
+    $('.main-view').html(mainView);
+  });
 
 
   $('.empty-wrapper').on('submit', apptForm, function (event) {
