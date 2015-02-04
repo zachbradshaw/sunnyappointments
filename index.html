@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
   <meta charset="utf-8">
   <title>Appointment App</title>
   <meta name="viewport" content="width=device-width">
   <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Raleway:700,400' rel='stylesheet' type='text/css'>
-
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main-page.css">
   <link rel="stylesheet" href="css/appt-detail-page.css">
@@ -14,132 +16,132 @@
   <link href="https://fontastic.s3.amazonaws.com/wwg3Jf9kDTvTkeuAzZJHre/icons.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-  // <script src="https://maps.googleapis.com/maps/api/js"></script>
-  //   <script>
-  //     function initialize() {
-  //       var mapCanvas = document.querySelector('.map-canvas');
-  //       var mapOptions = {
-  //         center: new google.maps.LatLng(44.5403, -78.5463),
-  //         zoom: 8,
-  //         mapTypeId: google.maps.MapTypeId.ROADMAP
-  //       }
-  //       var map = new google.maps.Map(mapCanvas, mapOptions)
-  //     }
-  //     google.maps.event.addDomListener(window, 'load', initialize);
-  //   </script>
-
-
-
 </head>
 
 <body>
-
-
-
 
   <header></header>
 
   <div class="empty-wrapper"></div>
 
+    <!-- This script contains HTML for main page -->
     <script id="main-page" type="text/html">
 
       <div class="main-view">
+
         <div class="error-text">
-          IF YOU CAN SEE THIS YOU NEED TO SHRIKNK YOUR DISPLAY TO BELOW 415PX YOU DONKEY!
+          IF YOU CAN SEE THIS YOU NEED TO SHRINK YOUR DISPLAY TO BELOW 415PX YOU DONKEY!
         </div>
         <div class="overlay"></div>
-
         <div class="main-view-header"><button class="add-appt">+</button><span class="header-span">Appointments</span></div>
-          <ul class = "appt-container">
-            <li class="appt-li">
-              <div class="date-time-div">
-                <span class="appt-time">5pm</span>
-                <span class="appt-date">10/21</span>
+        <ul class = "appt-container">
+
+          <li class="appt-li">
+
+            <div class="date-time-div">
+
+              <span class="appt-time">5pm</span>
+              <span class="appt-date">10/21</span>
+
+            </div>
+            <div class="name-address-div">
+
+              <span class="appt-name">Meet Brad</span>
+              <span class="appt-address">201 W Main</span>
+
+            </div>
+            <button class="remove-appt-button">x</button>
+
+              <div class="confirm-delete-popup">
+
+                <span class="confirm-delete-text">Delete Test Appt?</span>
+                <button class="confirm-delete-yes">yes</button>
+                <button class="confirm-delete-cancel">cancel</button>
+
               </div>
-              <div class="name-address-div">
-                <span class="appt-name">Meet Brad</span>
-                <span class="appt-address">201 W Main</span>
-              </div>
-              <button class="remove-appt-button">x</button>
-                <div class="confirm-delete-popup">
-                  <span class="confirm-delete-text">Delete Test Appt?</span>
-                  <button class="confirm-delete-yes">yes</button>
-                  <button class="confirm-delete-cancel">cancel</button>
-                </div>
-            </li>
-          </ul>
+
+          </li>
+
+        </ul>
 
       </div>
 
     </script>
 
+    <!-- This script contains HTML for the add appointment page -->
     <script id="add-appt-page" type="text/html">
 
 
       <div class="add-appt-view">
       <div class="overlay"></div>
+
         <div class="add-appt-header">
+
           <span class="header-span">New Appointment</span>
           <button class="back-button">b</button>
+
         </div>
 
-          <div class="appt-form-container">
-            <form class="add-appt-form">
-              <!-- <label class="form-label">Title</label> -->
-              <input type="text" class="add-appt-name" placeholder="Name"><br>
-              <!-- <label class="form-label">Date</label> -->
-              <input type="text" class="add-appt-date" placeholder="Date"><span class="calander-icon"></span><br>
-              <!-- <label class="form-label">Time</label> -->
-              <input type="text" class="add-appt-time" placeholder="Time"><br>
-              <!-- <label class="form-label">Street</label> -->
-              <input type="text" class="add-appt-street" placeholder="Address"><br>
-              <!-- <label class="form-label">City, State</label> -->
-              <input type="text" class="add-appt-state" placeholder="City, State"><br>
-              <button class="confirm-appt">Make Appointment</button>
-            </form>
-          </div>
-</span>
+        <div class="appt-form-container">
+
+          <form class="add-appt-form">
+
+            <input type="text" class="add-appt-name" placeholder="Name"><br>
+            <input type="text" class="add-appt-date" placeholder="Date"><span class="calander-icon"></span><br>
+            <input type="text" class="add-appt-time" placeholder="Time"><br>
+            <input type="text" class="add-appt-street" placeholder="Address"><br>
+            <input type="text" class="add-appt-state" placeholder="City, State"><br>
+            <input class="confirm-appt" type="submit" value="Make Appointment">
+
+          </form>
+
+        </div>
+
       </div>
 
     </script>
 
+    <!-- This script contains HTML for the appointment detail page -->
     <script id="appt-detail-page" type="text/html">
 
-
       <div class="appt-detail-view">
+
         <div class="overlay"></div>
-
-
         <div class="appt-detail-header"><span class="header-span">Appointment Detail</span>
+
           <button class="back-button">b</button>
           <button class="edit-appt-button">e</button>
+
         </div>
 
         <div class="appt-detail-container">
+
           <div class="detail-name">Meet Brad</div>
           <div class="detail-time-date">5pm, Tuesday October, 21</div>
           <div class="detail-address">201 W Main St, Durham NC</div>
+
         </div>
         <div class="map-canvas">GOOGLE MAP GOES HERE</div>
         <div class="detail-weather">
+
           <span class="temp">76&#176</span>
           <span class="weather">S</span>
+
         </div>
+        <button class="delete-appt-button">Delete Appointment</button>
 
       </div>
 
-
-
-
-
     </script>
 
-
-
     <script src="js/app.js"></script>
-
-
-
+    <script src="js/appointment.js"></script>
+    <script src="js/appointment-store.js"></script>
+    <!-- // <script src="js/appointment-form.js"></script> -->
+    <script src="js/show-list-page.js"></script>
+    <script src="js/show-add-page.js"></script>
+    <script src="js/show-detail-page.js"></script>
+    <script src="js/init.js"></script>
 
 </body>
 </html>
