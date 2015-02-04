@@ -1,4 +1,4 @@
-app.showDetailPage function() {
+app.showDetailPage = function() {
 
   var detailAppt = $('#appt-detail-page').html();
 
@@ -6,5 +6,5 @@ app.showDetailPage function() {
   $('.empty-wrapper').on('click', '.back-button', function(){
     $('.main-view').html(mainView);
   });
-  
+
 }

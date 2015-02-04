@@ -1,32 +1,32 @@
-function AppointmentStore () {
-  var collection = [];
+app.AppointmentStore = function () {
+  var appointments = [];
 
   var self = {
-    add: function (obj){
-      if (!self.exists(obj)){
-      collection.push(obj);
-      return true;
-      }
-      return false;
+    add: function (appt){
+      appointments.push(appt);
     },
 
     query:  function (){
-      return collection;
+      return appointments;
     },
 
-    exists: function (obj){
-      return collection.some(function (item){
-        return obj.equal(item);
-      });
+    load: function () {
+      appointments = JSON.parse(localStorage.getItem('appts')) || [];
     },
 
-    remove: function(obj){
-      collection = collection.filter(function (item){
+    save: function () {
+      localStorage.setItem('appts', JSON.stringify(appointments));
+    },
+
+
+    remove: function(appt){
+      appointments = appointments.filter(function (item){
         return !obj.equal(item);
       });
-    }
+    },
+
   };
 
 return self;
 
-}
+};
