@@ -6,7 +6,7 @@ app.AppointmentStore = function () {
       appointments.push(appt);
     },
 
-    query:  function (){
+    query: function (){
       return appointments;
     },
 
@@ -19,10 +19,19 @@ app.AppointmentStore = function () {
     },
 
     remove: function(appt){
-      appointments = appointments.filter(function (item){
-        return !appt.equal(item);
-      });
-    },
+      var index = appointments.indexOf(appt);
+      // if (index > -1) {
+      appointments.splice(index, 1);
+      // };
+      // for (var i = 0; i < appointments.length; ++i) {
+      //   delete appointments[i];
+      // }
+
+      return appointments;
+      // appointments = appointments.filter(function (item){
+      //   return appointments - appt;
+      // });
+    }
 
   };
 

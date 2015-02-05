@@ -11,12 +11,12 @@ app.Appointment = function (spec) {
       time: spec.time,
       streetAddress: spec.streetAddress,
       cityState: spec.cityState,
-      timeId: Math.floor(Date.now() /1000)
-    }
-  //  equal: function(otherUser) {
-  //    return (if statement to match date + time wiht other appt's);
-  //
-  // };
+      timeId: Math.floor(Date.now() /1000),
+
+      equal: function (otherAppt) {
+        return self.timeId === otherAppt.timeId;
+      }
+  };
 
   return self;
 

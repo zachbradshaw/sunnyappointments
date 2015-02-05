@@ -22,7 +22,6 @@ app.showAddPage = function () {
 
     app.appointments.add(appt);
     event.preventDefault(); // could also be return false;
-
     app.showListPage();
 
     // var addTitle = $('.add-appt-name').val();
