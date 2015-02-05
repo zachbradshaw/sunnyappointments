@@ -18,15 +18,14 @@ app.AppointmentStore = function () {
       localStorage.setItem('appts', JSON.stringify(appointments));
     },
 
-
     remove: function(appt){
       appointments = appointments.filter(function (item){
-        return !obj.equal(item);
+        return !appt.equal(item);
       });
     },
 
   };
 
-return self;
+  return self;
 
 };

@@ -5,31 +5,22 @@ app.showListPage = function () {
   var appts = app.appointments.query();
   var template = _.template(mainView, {variable: 'm'});
 
-
   // $('.empty-wrapper').html(mainView);
   $('.empty-wrapper').html(template  ({
       appts: appts
   }));
 
-
   $('.empty-wrapper').on('click', '.appt-li', function() {
-    $('.main-view').html(detailAppt);
+    app.showDetailPage();
   });
-
 
   $('.empty-wrapper').on('click', '.remove-appt-button', function() {
-    alert("fire");
-    // app.appointments.remove()
-
+    // alert("fire");
+    app.appointments.remove();
   });
-
-
-
-
 
   $('.empty-wrapper').on('click', '.add-appt',function() {
     app.showAddPage();
   });
-
 
 };

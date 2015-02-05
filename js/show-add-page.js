@@ -2,18 +2,15 @@ app.showAddPage = function () {
 
   var mainView = $('#main-page').html();
   var addAppt = $('#add-appt-page').html();
-  $('.main-view').html(addAppt);
   var apptForm = $('.add-appt-form');
-
-
+  $('.main-view').html(addAppt);
 
   $('.empty-wrapper').on('click', '.back-button', function(){
-    $('.main-view').html(mainView);
+    app.showListPage();
   });
 
-
   $('.empty-wrapper').on('submit', apptForm, function (event) {
-    alert("fire");
+    // alert("fire");
 
     var appt = app.Appointment({
       title: $('.add-appt-name').val(),
@@ -39,7 +36,6 @@ app.showAddPage = function () {
     // app.apptStore.add(app.Appointment(getApptDetails()));
     // listAppt();
 
-    });
+  });
 
-
-  };
+};
