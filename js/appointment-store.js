@@ -10,9 +10,9 @@ app.AppointmentStore = function () {
       return appointments;
     },
 
-    // load: function () {
-    //   appointments = JSON.parse(localStorage.getItem('appts')) || [];
-    // },
+    load: function () {
+      appointments = JSON.parse(localStorage.getItem('appts')) || [];
+    },
 
     save: function () {
       localStorage.setItem('appts', JSON.stringify(appointments));
@@ -31,7 +31,15 @@ app.AppointmentStore = function () {
       // appointments = appointments.filter(function (item){
       //   return appointments - appt;
       // });
-    }
+    },
+
+      getById: function(appointmentId) {
+        for (var i = 0; i < appointments.length; ++i) {
+          if (appointments[i].timeId === appointmentId) {
+            return appointments[i];
+          }
+        }
+      }
 
   };
 

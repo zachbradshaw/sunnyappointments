@@ -41,7 +41,7 @@
 
           <% m.appts.forEach(function (appt) { %>
 
-          <li class="appt-li">
+          <li class="appt-li" data-timeId="<%- appt.timeId %>">
 
             <div class="date-time-div">
 
@@ -118,18 +118,18 @@
 
         <div class="appt-detail-container">
 
-          <div class="detail-name">Meet Brad</div>
-          <div class="detail-time-date">5pm, Tuesday October, 21</div>
-          <div class="detail-address">201 W Main St, Durham NC</div>
+            <div class="detail-name"><%- appt.title %></div>
+            <div class="detail-time-date"><%- appt.time %> + ' ' + <%- appt.date %></div>
+            <div class="detail-address"><%- appt.streetAddress %> + ' ' + <%- appt.cityState %></div>
 
-        </div>
+          </div>
         <div class="detail-weather">
 
           <span class="temp">76&#176</span>
           <span class="weather">S</span>
 
         </div>
-        
+
         <div class="map-canvas">GOOGLE MAP GOES HERE</div>
         <button class="delete-appt-button">Delete Appointment</button>
 

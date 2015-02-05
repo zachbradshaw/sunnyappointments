@@ -16,17 +16,22 @@ app.showListPage = function () {
 
 
   $('.appt-li').click(function() {
+    var item = $(this);
+    var appointmentId = item.data('timeId');
+    var appt = app.appointments.getById(appointmentId);
+
     console.log("test");
     // console.log('fire');
-    app.showDetailPage();
+    app.showDetailPage(appt);
   });
-  //
-  // $('.empty-wrapper').on('click', '.remove-appt-button', function() {
-  //   // alert("fire");
-  //   app.appointments.remove(app.showAddPage.appt);
-  //   app.showListPage();
-  // });
-  //
+
+
+  $('.remove-appt-button').click(function() {
+    // alert("fire");
+    app.appointments.remove(app.showAddPage.appt);
+    app.showListPage();
+  });
+
   // $('.empty-wrapper').on('click', '.add-appt',function() {
   //   app.showAddPage();
   // });
