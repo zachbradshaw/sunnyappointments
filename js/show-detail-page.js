@@ -8,11 +8,6 @@ app.showDetailPage = function() {
     app.showListPage();
   });
 
-  $('.empty-wrapper').on('click', '.delete-appt-button', function () {
-    app.appointments.remove();
-    app.showListPage();
-  });
-
   var map;
 
   var mapOptions = {

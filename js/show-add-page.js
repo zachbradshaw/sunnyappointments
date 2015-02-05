@@ -2,14 +2,14 @@ app.showAddPage = function () {
 
   var mainView = $('#main-page').html();
   var addAppt = $('#add-appt-page').html();
-  var apptForm = $('.add-appt-form');
   $('.main-view').html(addAppt);
+  var apptForm = $('.add-appt-form');
 
-  $('.empty-wrapper').on('click', '.back-button', function(){
+  $(apptForm).on('click', '.back-button', function(){
     app.showListPage();
   });
 
-  $('.empty-wrapper').on('submit', apptForm, function (event) {
+  $(apptForm).submit(function (event) {
     // alert("fire");
 
     var appt = app.Appointment({

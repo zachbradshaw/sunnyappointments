@@ -10,9 +10,9 @@ app.AppointmentStore = function () {
       return appointments;
     },
 
-    load: function () {
-      appointments = JSON.parse(localStorage.getItem('appts')) || [];
-    },
+    // load: function () {
+    //   appointments = JSON.parse(localStorage.getItem('appts')) || [];
+    // },
 
     save: function () {
       localStorage.setItem('appts', JSON.stringify(appointments));
