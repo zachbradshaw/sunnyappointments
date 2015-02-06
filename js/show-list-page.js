@@ -1,21 +1,21 @@
 app.showListPage = function () {
 
- var mainView = $('#main-page').html();
- var detailAppt = $('#appt-detail-page').html();
- var appts = app.appointments.query();
- var template = _.template(mainView, {variable: 'm'});
+  var mainView = $('#main-page').html();
+  var detailAppt = $('#appt-detail-page').html();
+  var appts = app.appointments.query();
+  var template = _.template(mainView, {variable: 'm'});
 
 
- // $('.empty-wrapper').html(mainView);
- $('.empty-wrapper').html(template  ({
+  // $('.empty-wrapper').html(mainView);
+  $('.empty-wrapper').html(template  ({
      appts: appts
- }));
+  }));
 
 
  $('.add-appt').click(app.showAddPage);
 
 
- $('.appt-li').click(function() {
+  $('.appt-li').click(function() {
    var item = $(this);
    // console.log(item);
    var timeId = item.data('id');
@@ -30,10 +30,10 @@ app.showListPage = function () {
    // console.log(appt);
    app.showDetailPage(appt);
 
- });
+  });
 
 
- $('.remove-appt-button').click(function() {
+  $('.remove-appt-button').click(function() {
    theLi = $(this).parent();
    var timeId = theLi.data('id');
    // console.log(timeId);
@@ -42,7 +42,7 @@ app.showListPage = function () {
    console.log(app.appointments.query());
    theLi.remove();
    app.showListPage();
- });
+  });
 
 
 };
