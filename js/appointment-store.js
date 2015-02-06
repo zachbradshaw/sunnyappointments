@@ -33,13 +33,13 @@ app.AppointmentStore = function () {
       // });
     },
 
-      getById: function(appointmentId) {
-        for (var i = 0; i < appointments.length; ++i) {
-          if (appointments[i].timeId === appointmentId) {
-            return appointments[i];
-          }
+    getById: function(appointmentId) {
+      for (var i = 0; i < appointments.length; ++i) {
+        if (appointments[i]['data-timeid'] === appointmentId) {
+          return appointments[i];
         }
-      }
+      };
+    }
 
   };
 

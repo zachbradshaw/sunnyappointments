@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/add-appt-page.css">
   <link href="https://fontastic.s3.amazonaws.com/wwg3Jf9kDTvTkeuAzZJHre/icons.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="/Users/hifilorau/code/exercises/sunnyappointments/bower_components/lodash/lodash.min.js"></script>
+  <!-- // <script src="/Users/hifilorau/code/exercises/sunnyappointments/bower_components/lodash/lodash.min.js"></script> -->
   <script src="/Users/Zach/dev/sunnyappointments/bower_components/lodash/lodash.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
 
@@ -41,7 +41,7 @@
 
           <% m.appts.forEach(function (appt) { %>
 
-          <li class="appt-li" data-timeId="<%- appt.timeId %>">
+          <li class="appt-li" data-timeid="<%- appt.timeid %>">
 
             <div class="date-time-div">
 
@@ -118,9 +118,9 @@
 
         <div class="appt-detail-container">
 
-            <div class="detail-name"><%- appt.title %></div>
-            <div class="detail-time-date"><%- appt.time %> + ' ' + <%- appt.date %></div>
-            <div class="detail-address"><%- appt.streetAddress %> + ' ' + <%- appt.cityState %></div>
+            <div class="detail-name"><%- m.title %></div>
+            <div class="detail-time-date"><%- m.time %> <%- m.date %></div>
+            <div class="detail-address"> <%- m.streetAddress %> <%- m.cityState %></div>
 
           </div>
         <div class="detail-weather">
