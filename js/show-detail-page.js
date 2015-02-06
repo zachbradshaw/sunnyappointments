@@ -2,13 +2,13 @@ app.showDetailPage = function(appt) {
 
   var detailAppt = $('#appt-detail-page').html();
   var detailTemplate = _.template(detailAppt, {variable: 'm'});
-  var weather = $('#weather').html();
-  var weatherTemplate = _.template(weather, {variable: 'm'});
+  // var weather = $('#weather').html();
+  // var weatherTemplate = _.template(weather, {variable: 'm'});
   // var appts = app.appointments.query()
 
   $('.empty-wrapper').html(detailTemplate(appt));
   // console.log("HEEELLLLPO");
-  $('.weather-wrapper').html(weatherTemplate(appt));
+  // $('.weather-wrapper').html(weatherTemplate(appt));
 
 
   $('.empty-wrapper').on('click', '.back-button', function(){
@@ -19,6 +19,8 @@ app.showDetailPage = function(appt) {
     app.appointments.remove();
     app.showListPage();
   });
+
+  app.weather(appt)
 
 }
 
