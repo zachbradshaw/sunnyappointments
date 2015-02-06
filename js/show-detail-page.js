@@ -5,7 +5,7 @@ app.showDetailPage = function(appt) {
   // var appts = app.appointments.query()
 
   $('.empty-wrapper').html(detailTemplate(appt));
-  console.log("HEEELLLLPO");
+  // console.log("HEEELLLLPO");
 
   $('.empty-wrapper').on('click', '.back-button', function(){
      app.showListPage();

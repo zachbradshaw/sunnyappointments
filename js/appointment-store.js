@@ -33,9 +33,22 @@ app.AppointmentStore = function () {
       // });
     },
 
+    // getById: function(appointmentId) {
+    //   for (var i = 0; i < appointments.length; ++i) {
+    //     if (appointments[i]['data-id'] === appointmentId) {
+    //       console.log(appointments[i]);
+    //       return appointments[i];
+    //     }
+    //   };
+    // }
+
     getById: function(appointmentId) {
       for (var i = 0; i < appointments.length; ++i) {
-        if (appointments[i]['data-timeid'] === appointmentId) {
+        var thisAppointmentId = appointments[i].timeId;
+        console.log(thisAppointmentId)
+
+        if (thisAppointmentId === appointmentId) {
+          console.log(i);
           return appointments[i];
         }
       };
