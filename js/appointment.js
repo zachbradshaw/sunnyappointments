@@ -11,7 +11,7 @@ app.Appointment = function (spec) {
       time: spec.time,
       streetAddress: spec.streetAddress,
       cityState: spec.cityState,
-      timeId: Math.floor(Date.now() /1000),
+      timeId: (Date.now()),
 
       equal: function (otherAppt) {
         return self.timeId === otherAppt.timeId;
