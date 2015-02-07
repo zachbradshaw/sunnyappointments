@@ -5,12 +5,11 @@ app.showAddPage = function () {
   $('.main-view').html(addAppt);
   var apptForm = $('.add-appt-form');
 
-  $(apptForm).on('click', '.back-button', function(){
+  $('.back-button').click(function(){
     app.showListPage();
   });
 
   $(apptForm).submit(function (event) {
-    // alert("fire");
 
     var appt = app.Appointment({
       title: $('.add-appt-name').val(),
@@ -22,19 +21,9 @@ app.showAddPage = function () {
     });
 
     app.appointments.add(appt);
-    event.preventDefault(); // could also be return false;
+    app.appointments.save(appt);
+    event.preventDefault();
     app.showListPage();
-
-    // var addTitle = $('.add-appt-name').val();
-    // var addDate = $('.add-appt-date').val();
-    // var addTime = $('.add-appt-time').val();
-    // var addStreetAddress = $('.add-appt-street').val();
-    // var addCityState = $('.add-appt-state').val();
-    // event.preventDefault();
-    // event.stopPropagation();
-    // alert("fire");
-    // app.apptStore.add(app.Appointment(getApptDetails()));
-    // listAppt();
 
   });
 

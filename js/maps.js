@@ -7,7 +7,7 @@ app.buildMap = function(appt) {
 
   console.log(address);
   var mapOptions = {
-    zoom: 8,
+    zoom: 15,
     center: latlng
   };
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
