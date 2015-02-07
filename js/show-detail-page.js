@@ -20,7 +20,8 @@ app.showDetailPage = function(appt) {
     app.showListPage();
   });
 
-  app.weather(appt)
+  app.weather(appt);
+  app.buildMap(appt);
 
 }
 
