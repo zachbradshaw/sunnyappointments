@@ -1,7 +1,6 @@
 app.buildMap = function(appt) {
-  var maps = $('#maps').html();
+  var maps = $('#map-script').html();
   var mapsTemplate = _.template(maps, {variable: 'm'});
-  var map = new google.maps.Map(document.querySelector(".map-wrapper"), mapOptions);
   var geocoder = new google.maps.Geocoder();
   var address = appt.fullAddress;
   var latlng = new google.maps.LatLng(-35.9886, 78.9072);
@@ -11,6 +10,7 @@ app.buildMap = function(appt) {
     zoom: 8,
     center: latlng
   };
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
@@ -19,11 +19,12 @@ app.buildMap = function(appt) {
           map: map,
           position: results[0].geometry.location
       });
-    $('.map-wrapper').html(mapsTemplate(map))
+    $('.map-new').html(mapsTemplate(map));
     } else {
       alert("Geocode was not successful for the following reason: " + status);
     }
 
   });
 
+  console.log(map);
 }
