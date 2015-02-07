@@ -10,11 +10,10 @@ app.Appointment = function (spec) {
       date: spec.date,
       time: spec.time,
       streetAddress: spec.streetAddress,
-      // cityState: spec.cityState,
       city: spec.city,
       state: spec.state,
       timeId: (Date.now()),
-      // fullAddress: streetAddress + ' ' + city + ', ' + state,
+      fullAddress: spec.streetAddress + ' ' + spec.city + ', ' + spec.state,
 
       equal: function (otherAppt) {
         return self.timeId === otherAppt.timeId;

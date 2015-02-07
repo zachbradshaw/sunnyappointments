@@ -1,18 +1,19 @@
-app.buildMap = function (appt){
+app.buildMap = function(appt) {
   var maps = $('#maps').html();
-  // var mapsTemplate = _.template(maps, {variable: 'm'});
+  var mapsTemplate = _.template(maps, {variable: 'm'});
 
+  var address = document.getElementById("address").value;
+  geocoder.geocode( { 'address': address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location
+      });
+    } else {
+      alert("Geocode was not successful for the following reason: " + status);
+    }
 
+  });
 
-  var map;
-
-  var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(35.9886, -78.9072)
-  };
-
-    map = new google.maps.Map(document.querySelector('.map-canvas'),mapOptions);
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-
-};
+}
