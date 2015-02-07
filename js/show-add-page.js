@@ -17,7 +17,8 @@ app.showAddPage = function () {
       date: $('.add-appt-date').val(),
       time: $('.add-appt-time').val(),
       streetAddress: $('.add-appt-street').val(),
-      cityState: $('.add-appt-state').val()
+      city: $('.add-appt-city').val(),
+      state: $('.add-appt-state').val()
     });
 
     app.appointments.add(appt);

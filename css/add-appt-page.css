@@ -71,8 +71,9 @@
   .add-appt-date,
   .add-appt-time,
   .add-appt-street,
+  .add-appt-city,
   .add-appt-state {
-    padding: 1.2em;
+    padding: 1em;
     font-size: 1.3em;
     margin-bottom: 5px;
     width: 15em;

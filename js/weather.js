@@ -4,10 +4,11 @@ app.weather = function (appt) {
     var weatherTemplate = _.template(weather, {variable: 'm'});
     console.log(appt);
 
-  $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + appt.cityState + ' ' + appt.date)
+  $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + appt.cityState + ' ' + appt.date + ' ' + appt.time)
     .done(function (data) {
       console.log(data);
       console.log(Math.floor((data.main.temp - 273.15) * 1.8000 + 32));
+      console.log(data.weather[0].icon);
       console.log(data.weather[0].description);
       $('.weather-wrapper').html()
       $('.weather-wrapper').html(weatherTemplate(data));
