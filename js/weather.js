@@ -3,9 +3,13 @@ app.weather = function (appt) {
     var weather = $('#weather').html();
     var weatherTemplate = _.template(weather, {variable: 'm'});
     console.log(appt);
+    // var url = 'api.openweathermap.org/data/2.5/weather?q=London,uk';
+    // var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + appt.city + ',' appt.state + appt.date + appt.time;
 
-  $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + appt.cityState + ' ' + appt.date + ' ' + appt.time)
+
+  $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + appt.city + ',' + appt.state)
     .done(function (data) {
+      // console.log(url);
       console.log(data);
       console.log(Math.floor((data.main.temp - 273.15) * 1.8000 + 32));
       console.log(data.weather[0].icon);

@@ -13,7 +13,7 @@ app.Appointment = function (spec) {
       city: spec.city,
       state: spec.state,
       timeId: (Date.now()),
-      fullAddress: spec.streetAddress + ' ' + spec.city + ', ' + spec.state,
+      // fullAddress: spec.streetAddress + ' ' + spec.city + ', ' + spec.state,
 
       equal: function (otherAppt) {
         return self.timeId === otherAppt.timeId;

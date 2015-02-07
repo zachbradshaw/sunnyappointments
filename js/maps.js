@@ -2,7 +2,7 @@ app.buildMap = function(appt) {
   var maps = $('#maps').html();
   var mapsTemplate = _.template(maps, {variable: 'm'});
 
-  var address = document.getElementById("address").value;
+  var address = appt.fullAddress;
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location);
