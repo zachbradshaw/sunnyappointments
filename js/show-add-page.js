@@ -9,6 +9,9 @@ app.showAddPage = function () {
     app.showListPage();
   });
 
+  $('.add-appt-date').pickadate();
+  $('.add-appt-time').pickatime();
+
   $(apptForm).submit(function (event) {
 
     var appt = app.Appointment({
@@ -19,6 +22,9 @@ app.showAddPage = function () {
       city: $('.add-appt-city').val(),
       state: $('.add-appt-state').val()
     });
+
+    console.log (appt.time);
+    console.log(appt.date);
 
     app.appointments.add(appt);
     app.appointments.save(appt);
