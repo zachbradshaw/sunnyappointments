@@ -1,9 +1,6 @@
 // The appointment constructor creates
 // a new appointment.
 app.Appointment = function (spec) {
-  // if (!spec.firstName || spec.firstName.trim() === ''){
-  //  throw 'First name is required';
-  // }
 
   var self = {
       title: spec.title,

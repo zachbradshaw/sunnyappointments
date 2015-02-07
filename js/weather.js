@@ -3,9 +3,6 @@ app.weather = function (appt) {
     var weather = $('#weather').html();
     var weatherTemplate = _.template(weather, {variable: 'm'});
     console.log(appt);
-    // var url = 'api.openweathermap.org/data/2.5/weather?q=London,uk';
-    // var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + appt.city + ',' appt.state + appt.date + appt.time;
-
 
   $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + appt.city + ',' + appt.state)
     .done(function (data) {
@@ -23,17 +20,3 @@ app.weather = function (appt) {
     });
 
 };
-
-
-// The API's' temperature data was stored in an
-    // object called "main" - tempData contains that
-    // // stringified information taken from data.main
-    // var tempData = JSON.stringify(data.temp);
-    //
-    // // Parsing the tempData to be able to pull the value
-    // var tempDataParsed = JSON.parse(tempData);
-    //
-    // // Pulling the value (.temp) from the parsed string
-    // // and storing it in a variable that indicates the
-    // // info is in Kelvin
-    // var tempInK = tempDataParsed.temp;
