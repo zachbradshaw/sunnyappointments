@@ -4,8 +4,6 @@ body {
   color: white;
 }
 
-
-
 @media (max-width: 415px) {
 
   .main-view {
@@ -64,11 +62,15 @@ body {
     background: white;
     opacity: .8;
     min-height: 5em;
-    font-size: 1.3em;
+    font-size: 1em;
     box-sizing: border-box;
     color: black;
     font-weight: 600;
     line-height: 1.4em;
+  }
+
+  .hide-appt-li {
+    display: none;
   }
 
   .confirm-delete-popup {

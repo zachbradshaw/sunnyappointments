@@ -9,7 +9,9 @@ app.showAddPage = function () {
     app.showListPage();
   });
 
-  $('.add-appt-date').pickadate();
+  $('.add-appt-date').pickadate({
+    format: 'mm/dd/yyyy'
+  });
   $('.add-appt-time').pickatime();
 
   $(apptForm).submit(function (event) {

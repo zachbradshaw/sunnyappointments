@@ -20,7 +20,7 @@ app.AppointmentStore = function () {
 
     remove: function(appt){
       var index = appointments.indexOf(appt);
-      
+
       return appointments.splice(index, 1);
 
       return appointments;
@@ -29,7 +29,7 @@ app.AppointmentStore = function () {
     getById: function(appointmentId) {
       for (var i = 0; i < appointments.length; ++i) {
         var thisAppointmentId = appointments[i].timeId;
-        console.log(thisAppointmentId)
+        console.log(thisAppointmentId);
 
         if (thisAppointmentId === appointmentId) {
           console.log(i);

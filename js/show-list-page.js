@@ -1,4 +1,5 @@
 app.showListPage = function () {
+  // app.timeMachine();
 
   var mainView = $('#main-page').html();
   var detailAppt = $('#appt-detail-page').html();
@@ -27,5 +28,7 @@ app.showListPage = function () {
    theLi.remove();
    app.showListPage();
   });
+
+  app.timeMachine();
 
 };
