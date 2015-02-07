@@ -29,10 +29,8 @@ app.AppointmentStore = function () {
     getById: function(appointmentId) {
       for (var i = 0; i < appointments.length; ++i) {
         var thisAppointmentId = appointments[i].timeId;
-        console.log(thisAppointmentId);
 
         if (thisAppointmentId === appointmentId) {
-          console.log(i);
           return appointments[i];
         }
       };

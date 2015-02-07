@@ -27,6 +27,7 @@ app.showListPage = function () {
    console.log(app.appointments.query());
    theLi.remove();
    app.showListPage();
+   app.appointments.save();
   });
 
   app.timeMachine();

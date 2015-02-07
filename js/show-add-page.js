@@ -25,9 +25,6 @@ app.showAddPage = function () {
       state: $('.add-appt-state').val()
     });
 
-    console.log (appt.time);
-    console.log(appt.date);
-
     app.appointments.add(appt);
     app.appointments.save(appt);
     event.preventDefault();
