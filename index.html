@@ -140,7 +140,7 @@
 
       <div class="detail-weather">
 
-        <span class="temp"><%- m.main.temp %></span>
+        <span class="temp"><%- (Math.floor((m.main.temp - 273.15) * 1.8000 + 32)) %></span>
         <span class="weather"><%- m.weather[0].description %></span>
 
       </div>

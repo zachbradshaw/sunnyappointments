@@ -7,7 +7,7 @@ app.weather = function (appt) {
   $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + appt.cityState + ' ' + appt.date)
     .done(function (data) {
       console.log(data);
-      console.log(data.main.temp);
+      console.log(Math.floor((data.main.temp - 273.15) * 1.8000 + 32));
       console.log(data.weather[0].description);
       $('.weather-wrapper').html()
       $('.weather-wrapper').html(weatherTemplate(data));
