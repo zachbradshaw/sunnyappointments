@@ -1,5 +1,3 @@
-/// The appointment constructor creates
-// a new appointment.
 app.Appointment = function (spec) {
 
 var self = {
@@ -21,5 +19,7 @@ var self = {
   getApptTime: function() {
      return moment(self.momentDate + ',' + self.momentTime).format('X');
   }
+
+};
 
 };

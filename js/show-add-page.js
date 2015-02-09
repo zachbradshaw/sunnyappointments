@@ -26,10 +26,10 @@ app.showAddPage = function () {
     state: $('.add-appt-state').val()
    });
 
+    event.preventDefault();
     app.appointments.add(appt);
     app.appointments.save(appt);
-    event.preventDefault();
-    app.showListPage();
+    app.showListPage(appt);
 
   });
 
