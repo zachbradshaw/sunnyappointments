@@ -21,20 +21,31 @@ app.AppointmentStore = function () {
     remove: function(appt){
       var index = appointments.indexOf(appt);
 
-      return appointments.splice(index, 1);
+    return appointments.splice(index, 1);
 
-      return appointments;
-    },
+    return appointments;
+  },
 
-    getById: function(appointmentId) {
-      for (var i = 0; i < appointments.length; ++i) {
-        var thisAppointmentId = appointments[i].timeId;
+  // CHRIS WE NEED THIS TO WORK, IT IS A SORT FUNCTION(or it will be)
+  // arrange: function() {
+  //
+  //       for(var i =0; i < appointments.length; i++) {
+  //           console.log(appointments.query()[i].app.Appointment.getApptTime());
+  //   }
+  //           return appointments;
+  //
+  // },
 
-        if (thisAppointmentId === appointmentId) {
-          return appointments[i];
-        }
-      };
-    }
+
+  getById: function(appointmentId) {
+    for (var i = 0; i < appointments.length; ++i) {
+      var thisAppointmentId = appointments[i].timeId;
+
+      if (thisAppointmentId === appointmentId) {
+        return appointments[i];
+      }
+    };
+  }
 
   };
 

@@ -5,7 +5,6 @@ app.buildMap = function(appt) {
   var address = appt.fullAddress;
   var latlng = new google.maps.LatLng(-35.9886, 78.9072);
 
-  console.log(address);
   var mapOptions = {
     zoom: 15,
     center: latlng
@@ -21,10 +20,9 @@ app.buildMap = function(appt) {
       });
     $('.map-new').html(mapsTemplate(map));
     } else {
-      alert("Geocode was not successful for the following reason: " + status);
+      console.log("Geocode was not successful for the following reason: " + status);
     }
 
   });
 
-  console.log(map);
 }

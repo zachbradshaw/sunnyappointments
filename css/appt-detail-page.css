@@ -6,9 +6,8 @@
     background-repeat: none;
     background-attachment: fixed;
     background-position: center top;
-    height: 47em;
-    position: fixed;
-    overflow: hidden;
+    min-height: 47em;
+    overflow: auto;
     width: 100%;
     text-align: center;
     font-size: 1.3em;
@@ -90,12 +89,8 @@
   }
 
   .weather-icon {
-    /*font-family: sunnyapp;*/
-    /*position: absolute;*/
-    /*font-size: 2.5em;*/
     right: 25%;
     top: 30%;
-    /*width: 100px;*/
   }
 
   .delete-appt-button {
@@ -108,6 +103,7 @@
     margin-top: .7em;
     border-radius: .25em;
     font-size: 1.1em;
+    display: none;
   }
 
 }

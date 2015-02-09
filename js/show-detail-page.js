@@ -5,12 +5,23 @@ app.showDetailPage = function(appt) {
 
   $('.empty-wrapper').html(detailTemplate(appt));
 
-  $('.empty-wrapper').on('click', '.back-button', function(){
+  $('.empty-wrapper').on('click', '.back-button', function() {
     app.showListPage();
    });
 
-  $('.empty-wrapper').on('click', '.delete-appt-button', function () {
+  $('.edit-appt-button').click(function() {
     app.appointments.remove(appt);
+    app.appointments.save();
+    app.appointments.load();
+    app.showListPage();
+    app.showAddPage();
+  });
+
+  $('.delete-appt-button').click(function () {
+    if ()
+    app.appointments.remove();
+    app.appointments.save();
+    app.appointments.load();
     app.showListPage();
   });
 
