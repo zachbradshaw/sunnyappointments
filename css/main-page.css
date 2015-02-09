@@ -34,10 +34,11 @@ body {
     min-height: 3em;
     text-align: center;
     position: relative;
-    background: white;
+    background: #0b2163;
     opacity: .8;
     padding-top: .9em;
     font-size: 1.3em;
+    color: white;
   }
 
   .header-span {
@@ -53,7 +54,7 @@ body {
     font-size: 1.2em;
     background: none;
     border: none;
-    color: #0b2163;
+    color: white;
   }
 
   .appt-li {
