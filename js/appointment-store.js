@@ -21,20 +21,18 @@ app.AppointmentStore = function () {
     remove: function(appt){
       var index = appointments.indexOf(appt);
 
-    return appointments.splice(index, 1);
+      return appointments.splice(index, 1);
+    },
 
-    return appointments;
-  },
+    getById: function(appointmentId) {
+      for (var i = 0; i < appointments.length; ++i) {
+        var thisAppointmentId = appointments[i].timeId;
 
-  getById: function(appointmentId) {
-    for (var i = 0; i < appointments.length; ++i) {
-      var thisAppointmentId = appointments[i].timeId;
-
-      if (thisAppointmentId === appointmentId) {
-        return appointments[i];
-      }
-    };
-  }
+        if (thisAppointmentId === appointmentId) {
+          return appointments[i];
+        }
+      };
+    }
 
   };
 

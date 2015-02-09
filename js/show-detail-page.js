@@ -17,13 +17,6 @@ app.showDetailPage = function(appt) {
     app.showAddPage();
   });
 
-  $('.delete-appt-button').click(function () {
-    app.appointments.remove();
-    app.appointments.save();
-    app.appointments.load();
-    app.showListPage();
-  });
-
   app.weather(appt);
   app.buildMap(appt);
 

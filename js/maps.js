@@ -25,4 +25,4 @@ app.buildMap = function(appt) {
 
   });
 
-}
+};

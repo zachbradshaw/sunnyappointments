@@ -85,10 +85,6 @@ body {
     bottom: 0;
   }
 
-  .show-delete-popup .confirm-delete-popup {
-    visibility: visible;
-  }
-
   .confirm-delete-yes, .confirm-delete-cancel {
     float: right;
     box-sizing: border-box;

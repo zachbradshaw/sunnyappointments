@@ -17,7 +17,7 @@ app.showAddPage = function () {
 
   $(apptForm).submit(function (event) {
 
-   var appt = app.Appointment({
+  var appt = app.Appointment({
     title: $('.add-appt-name').val(),
     date: $('.add-appt-date').val(),
     time: $('.add-appt-time').val(),
