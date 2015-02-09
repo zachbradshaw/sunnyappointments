@@ -22,4 +22,6 @@ app.Appointment = function (spec) {
 
   };
 
+  return self;
+
 };
