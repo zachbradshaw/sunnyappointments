@@ -34,8 +34,8 @@ body {
     min-height: 3em;
     text-align: center;
     position: relative;
-    background: black;
-    opacity: .7;
+    background: white;
+    opacity: .8;
     padding-top: .9em;
     font-size: 1.3em;
   }
@@ -43,6 +43,8 @@ body {
   .header-span {
     padding-top: .5em;
     display: block;
+    color: #0b2163;
+    font-weight: 600;
   }
 
   .add-appt {
@@ -51,7 +53,7 @@ body {
     font-size: 1.2em;
     background: none;
     border: none;
-    color: white;
+    color: #0b2163;
   }
 
   .appt-li {
@@ -63,9 +65,15 @@ body {
     min-height: 5em;
     font-size: 1em;
     box-sizing: border-box;
-    color: black;
+    color: #0b2163;
     font-weight: 600;
     line-height: 1.4em;
+  }
+
+  .appt-li:nth-child(odd) {
+    background: #b7b7b7;
+    opacity: .9;
+
   }
 
   .hide-appt-li {
@@ -106,8 +114,9 @@ body {
 
   .confirm-delete-text {
     padding-top: 2em;
-    padding-left: 3em;
+    padding-left: 2.2em;
     position: absolute;
+    color: #c54040;
 
   }
 
@@ -116,23 +125,41 @@ body {
     display: block;
   }
 
+  .appt-name {
+    font-size: 1.4em;
+    padding-bottom: .4em;
+    padding-top: .6em;
+
+  }
+
   .date-time-div {
-    height: 100%;
-    text-align: center;
+    height: 84%;
     position: absolute;
-    background-color: #3fc380;
-    width: 7em;
-    top: 50%;
-    padding: 1em 0;
-    transform: translateY(-50%);
+    background-color: #0b2163;
+    width: 4em;
+    top: 0%;
+    padding: .2em 0;
+    /*transform: translateY(-50%);*/
     box-sizing: border-box;
-    font-size: .9em;
+    border-right: 1px solid;
+    border-radius: 0 0 0.3em;
+
+  }
+
+  .appt-time {
+    font-size: 1.5em;
+    color: white;
+    position: absolute;
+    left: 10%;
+    line-height: 1.2em;
+
+
   }
 
   .name-address-div {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 47%;
+    top: 39%;
     transform: translate(-50%, -50%);
   }
 
@@ -146,10 +173,23 @@ body {
     border: none;
     background: none;
     outline: none;
+    color: #0b2163;
   }
 
   .appt-container {
     height: 100%;
+  }
+
+  .list-poo-icon {
+    position: absolute;
+    width: 35px;
+    left: .7em;
+    top: 20px;
+  }
+
+  .weather-info {
+    color: #0b2163;
+    width: 25%;
   }
 
 }

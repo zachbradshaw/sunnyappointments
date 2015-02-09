@@ -5,9 +5,11 @@ app.showListPage = function () {
   var appts = app.appointments.query();
   var template = _.template(mainView, {variable: 'm'});
 
+
   $('.empty-wrapper').html(template ({
     appts: appts
   }));
+
 
   $('.add-appt').click(app.showAddPage);
 
@@ -25,7 +27,7 @@ app.showListPage = function () {
   });
 
   $('.confirm-delete-yes').click(function() {
-    theLi = $(this).parent();
+    var theLi = $(this).parent();
     var timeId = theLi.data('id');
     var appt = app.appointments.getById(timeId);
     app.appointments.remove(appt);
@@ -39,5 +41,6 @@ app.showListPage = function () {
   });
 
   app.timeMachine();
+  app.weather();
 
 };
