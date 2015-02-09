@@ -112,18 +112,20 @@
       <div class="appt-detail-view">
 
         <div class="overlay"></div>
-        <div class="appt-detail-header"><span class="header-span"><%- m.title %></span>
+        <div class="appt-detail-header"><span class="header-span"><%- m.headerDate %></span>
 
           <button class="back-button">b</button>
           <button class="edit-appt-button">e</button>
 
         </div>
 
+          <div class="detail-time"><%- m.time %></div>
+
         <div class="appt-detail-container">
 
-            <div class="detail-time"><%- m.time %></div>
-            <div class="detail-date"><%- m.date %></div>
-            <div class="detail-address"> <%- m.streetAddress %> <%- m.city %> <%- m.state %></div>
+          <div class="detail-title"><span class="title-span"><%- m.title %></span></div>
+          <div class="detail-address"><span class="address-span"><%- m.streetAddress %> | <%- m.city %>, <%- m.state %></span></div>
+          <!-- <div class="detail-city-state"><span class="city-state-span"><%- m.city %>, <%- m.state %></span></div> -->
 
         </div>
 
@@ -131,7 +133,8 @@
 
         <div id="map-canvas"></div>
 
-      <button class="delete-appt-button">Delete Appointment</button>
+      <button class="list-view-button">Appointment List</button>
+      <span class="header-span"><img class="poo-icon" src="http://emojipedia.org/wp-content/uploads/2013/08/160x160x91-pile-of-poo.png.pagespeed.ic.N6iNfrs6Op.jpg"/></span>
 
       </div>
 
@@ -141,6 +144,7 @@
 
       <div class="detail-weather">
 
+        <span class="weather-caption">Current weather</span>
         <span class="temp"><%- (Math.floor((m.main.temp - 273.15) * 1.8000 + 32)) %>&#176</span>
         <span class="weather-span"><img class="weather-icon" src="http://openweathermap.org/img/w/<%- m.weather[0].icon %>.png"></span>
 

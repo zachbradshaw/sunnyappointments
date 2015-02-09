@@ -27,7 +27,7 @@ app.showListPage = function () {
   });
 
   $('.confirm-delete-yes').click(function() {
-    var theLi = $(this).parent();
+    var theLi = $(this).parent().parent();
     var timeId = theLi.data('id');
     var appt = app.appointments.getById(timeId);
     app.appointments.remove(appt);

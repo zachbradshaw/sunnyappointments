@@ -10,11 +10,15 @@ app.showDetailPage = function(appt) {
    });
 
   $('.edit-appt-button').click(function() {
-    app.appointments.remove(appt);
+    // app.appointments.remove(appt);
     app.appointments.save();
     app.appointments.load();
     app.showListPage();
-    app.showAddPage();
+    app.showAddPage(appt);
+  });
+
+  $('.list-view-button').click(function() {
+    app.showListPage();
   });
 
   app.weather(appt);
