@@ -32,8 +32,8 @@ app.showListPage = function () {
     var appt = app.appointments.getById(timeId);
     app.appointments.remove(appt);
     theLi.remove();
-    app.showListPage();
     app.appointments.save();
+    app.showListPage();
   });
 
   $('.confirm-delete-cancel').click(function() {

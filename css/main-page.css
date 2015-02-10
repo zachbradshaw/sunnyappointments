@@ -74,7 +74,6 @@ body {
   .appt-li:nth-child(odd) {
     background: #b7b7b7;
     opacity: .9;
-
   }
 
   .hide-appt-li {
@@ -118,7 +117,6 @@ body {
     padding-left: 2.2em;
     position: absolute;
     color: #c54040;
-
   }
 
   .appt-name,
@@ -130,21 +128,19 @@ body {
     font-size: 1.4em;
     padding-bottom: .4em;
     padding-top: .6em;
-
   }
 
   .date-time-div {
     height: 84%;
     position: absolute;
     background-color: #0b2163;
-    width: 4em;
+    width: 4.5em;
     top: 0%;
     padding: .2em 0;
     /*transform: translateY(-50%);*/
     box-sizing: border-box;
     border-right: 1px solid;
     border-radius: 0 0 0.3em;
-
   }
 
   .appt-time {
@@ -153,8 +149,6 @@ body {
     position: absolute;
     left: 10%;
     line-height: 1.2em;
-
-
   }
 
   .name-address-div {
